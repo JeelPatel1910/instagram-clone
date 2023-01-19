@@ -1,17 +1,24 @@
-import React from 'react'
-import Post from './Post'
-
-const posts =[
-    {
-        id: "123",
-        username: "jeel",
-        userImg: "../public/assets/profile.jpg",
-        img: "../public/assets/profile.jpg",
-        caption: "I am groot",
-    }
-]
+import React, {useState, useEffect} from 'react';
+import Post from './Post';
+import { faker } from '@faker-js/faker';
 
 function Posts() {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    const posts = [...Array(5)].map((_, i) => ({
+      id: i,
+      userId: faker.datatype.uuid(),
+      username: faker.internet.userName(),
+      email: faker.internet.email(),
+      userImg: faker.image.avatar(),
+      img: faker.image.image(),
+      password: faker.internet.password(),
+      caption: "I am groot",
+    }));
+    setPosts(posts);
+    console.log(posts);
+  }, []);
+
   return (
     <div>
         {posts.map((post)=>(      
