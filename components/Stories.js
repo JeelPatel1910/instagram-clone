@@ -17,7 +17,6 @@ export default function Stories() {
         registeredAt: faker.date.past(),
       }));
       setSuggestions(suggestions);
-      console.log(suggestions);
     }, []);
   
     return(

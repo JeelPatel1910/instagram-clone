@@ -16,7 +16,6 @@ function Posts() {
       caption: "I am groot",
     }));
     setPosts(posts);
-    console.log(posts);
   }, []);
 
   return (
