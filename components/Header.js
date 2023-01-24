@@ -53,13 +53,14 @@ function Header(props) {
              
                  {session ? (<>
                     <div className='relative navBtn'>
-                 <PaperAirplaneIcon 
-                  onClick={() => setOpen(true)}
+                 <PaperAirplaneIcon    
                   className='h-6 w-10 navBtn rotate-45'/>
                  <div className='absolute -top-1 -right-1 text-xs w-5 h-5 bg-red-500 text-white font-normal rounded-full flex items-center justify-center animate-pulse'>3</div>
                  </div>
    
-                 <PlusCircleIcon className='navBtn w-10'/>
+                 <PlusCircleIcon 
+                 onClick={() => setOpen(true)}
+                  className='navBtn w-10'/>
                  <UserGroupIcon className='navBtn w-10'/>
                  <HeartIcon className='navBtn w-10'/>
                  <img 

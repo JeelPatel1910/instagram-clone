@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header';
 import Feed from '../components/Feed';
+import Modal from '../components/Modal';
 import { useSession , signOut } from 'next-auth/react';
 
 export default function Home() {
@@ -12,9 +13,13 @@ export default function Home() {
         <title>Instagram</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Modal />
       <Header/>
       {session && (
-      <Feed />
+       <>
+       <Feed />
+       
+       </>
       )}
     </div>
   )
