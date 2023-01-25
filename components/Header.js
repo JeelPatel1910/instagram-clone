@@ -48,11 +48,13 @@ function Header(props) {
 
               {/*Right*/}
               <div className='flex items-center justify-end'>
-              <HomeIcon className='h-6 w-10 navBtn'  onClick={()=> router.push('/')}/>
-              <MenuIcon className='h-8 w-10 md:hidden cursor-pointer'/>
+              
              
                  {session ? (<>
-                    <div className='relative navBtn'>
+                <HomeIcon className='h-6 w-10 navBtn'  onClick={()=> router.push('/')}/>
+                <MenuIcon className='h-8 w-10 md:hidden cursor-pointer'/>
+                <div className='relative navBtn'>
+
                  <PaperAirplaneIcon    
                   className='h-6 w-10 navBtn rotate-45'/>
                  <div className='absolute -top-1 -right-1 text-xs w-5 h-5 bg-red-500 text-white font-normal rounded-full flex items-center justify-center animate-pulse'>3</div>
